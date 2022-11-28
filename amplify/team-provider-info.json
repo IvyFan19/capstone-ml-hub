@@ -13,7 +13,11 @@
     },
     "categories": {
       "auth": {
-        "mlhub41db3c4c": {}
+        "mlhub41db3c4c": {},
+        "mlhubf0dfb869": {}
+      },
+      "storage": {
+        "s3mlhubstoragecapstoneproject": {}
       }
     }
   }

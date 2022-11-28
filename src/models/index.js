@@ -4,8 +4,10 @@ import { schema } from './schema';
 
 
 
-const { MLModels } = initSchema(schema);
+const { CreatorsTable, MLModels, S3Object } = initSchema(schema);
 
 export {
-  MLModels
+  CreatorsTable,
+  MLModels,
+  S3Object
 };

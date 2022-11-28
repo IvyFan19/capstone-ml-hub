@@ -1,0 +1,11 @@
+{
+  "resourceName": "s3mlhubstoragecapstoneproject",
+  "bucketName": "mlhub-storage-capstoneproject",
+  "policyUUID": "947331ca",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ]
+}

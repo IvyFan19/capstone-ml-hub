@@ -32,7 +32,6 @@ export default function MLModelsCreateForm(props) {
     email: undefined,
     model_description: undefined,
     instructions: undefined,
-    model_S3: undefined,
     likes: undefined,
     dataset_description: undefined,
     model_size: undefined,
@@ -49,7 +48,6 @@ export default function MLModelsCreateForm(props) {
   const [instructions, setInstructions] = React.useState(
     initialValues.instructions
   );
-  const [model_S3, setModel_S3] = React.useState(initialValues.model_S3);
   const [likes, setLikes] = React.useState(initialValues.likes);
   const [dataset_description, setDataset_description] = React.useState(
     initialValues.dataset_description
@@ -65,7 +63,6 @@ export default function MLModelsCreateForm(props) {
     setEmail(initialValues.email);
     setModel_description(initialValues.model_description);
     setInstructions(initialValues.instructions);
-    setModel_S3(initialValues.model_S3);
     setLikes(initialValues.likes);
     setDataset_description(initialValues.dataset_description);
     setModel_size(initialValues.model_size);
@@ -80,7 +77,6 @@ export default function MLModelsCreateForm(props) {
     email: [{ type: "Email" }],
     model_description: [],
     instructions: [],
-    model_S3: [],
     likes: [],
     dataset_description: [],
     model_size: [],
@@ -111,7 +107,6 @@ export default function MLModelsCreateForm(props) {
           email,
           model_description,
           instructions,
-          model_S3,
           likes,
           dataset_description,
           model_size,
@@ -171,7 +166,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -205,7 +199,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -239,7 +232,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -273,7 +265,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -307,7 +298,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -341,7 +331,6 @@ export default function MLModelsCreateForm(props) {
               email: value,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -375,7 +364,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description: value,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -411,7 +399,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions: value,
-              model_S3,
               likes,
               dataset_description,
               model_size,
@@ -428,40 +415,6 @@ export default function MLModelsCreateForm(props) {
         errorMessage={errors.instructions?.errorMessage}
         hasError={errors.instructions?.hasError}
         {...getOverrideProps(overrides, "instructions")}
-      ></TextField>
-      <TextField
-        label="Model s3"
-        isRequired={false}
-        isReadOnly={false}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              task,
-              framework,
-              basemodel,
-              model_name,
-              creator,
-              email,
-              model_description,
-              instructions,
-              model_S3: value,
-              likes,
-              dataset_description,
-              model_size,
-            };
-            const result = onChange(modelFields);
-            value = result?.model_S3 ?? value;
-          }
-          if (errors.model_S3?.hasError) {
-            runValidationTasks("model_S3", value);
-          }
-          setModel_S3(value);
-        }}
-        onBlur={() => runValidationTasks("model_S3", model_S3)}
-        errorMessage={errors.model_S3?.errorMessage}
-        hasError={errors.model_S3?.hasError}
-        {...getOverrideProps(overrides, "model_S3")}
       ></TextField>
       <TextField
         label="Likes"
@@ -488,7 +441,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes: value,
               dataset_description,
               model_size,
@@ -522,7 +474,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description: value,
               model_size,
@@ -567,7 +518,6 @@ export default function MLModelsCreateForm(props) {
               email,
               model_description,
               instructions,
-              model_S3,
               likes,
               dataset_description,
               model_size: value,

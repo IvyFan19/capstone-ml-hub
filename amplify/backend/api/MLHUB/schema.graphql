@@ -1,3 +1,18 @@
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+}
+
+type CreatorsTable @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  alias: String
+  email: String
+  image: S3Object
+}
+
 type MLModels @model @auth(rules: [{allow: public}]) {
   id: ID!
   task: String
@@ -8,8 +23,9 @@ type MLModels @model @auth(rules: [{allow: public}]) {
   email: AWSEmail
   model_description: String
   instructions: String
-  model_S3: String
+  model_S3: S3Object
   likes: Int
   dataset_description: String
   model_size: Int
-} 
+}
+ 

@@ -23,7 +23,7 @@
     }
   },
   "auth": {
-    "mlhub41db3c4c": {
+    "mlhubf0dfb869": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -46,6 +46,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "storage": {
+    "s3mlhubstoragecapstoneproject": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
     }
   }
 }
