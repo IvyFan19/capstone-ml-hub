@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mlhub-dev-152412-authRole",
+      "UnauthRoleArn": "arn:aws:iam::786045444066:role/amplify-mlhub-dev-152412-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::786045444066:role/amplify-mlhub-dev-152412-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-mlhub-dev-152412-deployment",
+      "UnauthRoleName": "amplify-mlhub-dev-152412-unauthRole",
+      "StackName": "amplify-mlhub-dev-152412",
+      "StackId": "arn:aws:cloudformation:us-east-2:786045444066:stack/amplify-mlhub-dev-152412/45fa55f0-6d18-11ed-b26a-0ae71f5f0998",
+      "AmplifyAppId": "d1czm9vxujczr2"
+    },
+    "categories": {
+      "auth": {
+        "mlhub41db3c4c": {}
+      }
+    }
+  }
+}
