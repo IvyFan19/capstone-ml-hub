@@ -1,4 +1,5 @@
 import { Flex, View, useBreakpointValue, Button } from '@aws-amplify/ui-react'
+import { useState } from 'react';
 import { 
   MLHeroLayout,
 //   MLNavbar,
@@ -9,14 +10,24 @@ import {
 
 
 export const Home = () => {
+    const [selection, setSelection] = useState()
+    console.log(selection)
+    
+    
+    
+    
+    
     
     return (
         <div classname="home">
             <MLNavBarwithUpload  width={'100vw'}/>
             <MLHeroLayout width={'100%'} marginBottom="20px"/>
             <MLSearchLayout/>
+            <MLCardOverviewCollection overfow={'auto'} overrideItems={({item}) => ({
+                        onClick: () => setSelection(item)
+                    })}/>
 
-            <Flex overflow={'auto'}>
+            {/* <Flex overflow={'auto'}>
                 <Flex direction="row">
                     <View>
                     <Button>Image</Button>
@@ -24,10 +35,12 @@ export const Home = () => {
                     <Button>Video</Button>
                     <Button>Video</Button>
                     </View>
-                    <MLCardOverviewCollection width="100%"/>
+                    <MLCardOverviewCollection overfow={'auto'} overrideItems={({item}) => ({
+                        onClick: () => setSelection(item)
+                    })}/>
 
                 </Flex>
-            </Flex>
+            </Flex> */}
         </div>
 
     )
