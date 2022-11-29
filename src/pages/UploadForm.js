@@ -1,13 +1,16 @@
-//import { Flex, View, useBreakpointValue, Button } from '@aws-amplify/ui-react'
+import { Flex, View, useBreakpointValue, Button } from '@aws-amplify/ui-react'
 import { 
-CreatorsTableUpdateForm
+MLModelsCreateForm
 } from '../ui-components';
 
 
 export const UploadForm = () => {
     return (
         <div className='uploadform'>
-            <CreatorsTableUpdateForm width="100vw" />
+            <Flex justifyContent="center">
+                <MLModelsCreateForm width="40%" />
+            </Flex>
+            
         </div>
     )
 }
