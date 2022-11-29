@@ -1,8 +1,9 @@
 import { Flex, View, useBreakpointValue, Button } from '@aws-amplify/ui-react'
 import { 
   MLHeroLayout,
-  MLNavbar,
+//   MLNavbar,
   MLCardOverviewCollection,
+  MLNavBarwithUpload,
 } from '../ui-components';
 
 
@@ -10,7 +11,7 @@ export const Home = () => {
     
     return (
         <div classname="home">
-            <MLNavbar  width={'100vw'}/>
+            <MLNavBarwithUpload  width={'100vw'}/>
             <MLHeroLayout width={'100%'} marginBottom="20px"/>
 
             <Flex overflow={'auto'}>
@@ -30,8 +31,6 @@ export const Home = () => {
                 </Flex>
             </Flex>
         </div>
-
-
 
     )
 }

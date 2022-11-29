@@ -12,6 +12,7 @@ export { default as MLSearchLayout } from "./MLSearchLayout";
 export { default as MLHeroLayout } from "./MLHeroLayout";
 export { default as MLCardOverview } from "./MLCardOverview";
 export { default as MLCardOverviewCollection } from "./MLCardOverviewCollection";
+export { default as MLNavBarwithUpload } from "./MLNavBarwithUpload";
 export { default as studioTheme } from "./studioTheme";
 export { default as MLModelsCreateForm } from "./MLModelsCreateForm";
 export { default as CreatorsTableCreateForm } from "./CreatorsTableCreateForm";

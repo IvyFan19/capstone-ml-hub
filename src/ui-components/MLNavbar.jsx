@@ -6,10 +6,14 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useAuthSignOutAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function MLNavbar(props) {
   const { overrides, ...rest } = props;
+  const buttonOnClick = useAuthSignOutAction({ global: false });
   return (
     <View
       width="1440px"
@@ -206,6 +210,9 @@ export default function MLNavbar(props) {
         isDisabled={false}
         variation="primary"
         children="Logout"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </View>
