@@ -4,6 +4,7 @@ import {
 //   MLNavbar,
   MLCardOverviewCollection,
   MLNavBarwithUpload,
+  MLSearchLayout,
 } from '../ui-components';
 
 
@@ -13,21 +14,18 @@ export const Home = () => {
         <div classname="home">
             <MLNavBarwithUpload  width={'100vw'}/>
             <MLHeroLayout width={'100%'} marginBottom="20px"/>
+            <MLSearchLayout/>
 
             <Flex overflow={'auto'}>
-                <Flex position={'relative'} overflow={'hidden'} grow={1}>
-                <View>
-                <Button>Image</Button>
-                <Button>Video</Button>
-                <Button>Video</Button>
-                <Button>Video</Button>
-                </View>
-                </Flex>
-
-                <Flex position={'relative'} overflow={'hidden'} grow={1}>
-                <View>
+                <Flex direction="row">
+                    <View>
+                    <Button>Image</Button>
+                    <Button>Video</Button>
+                    <Button>Video</Button>
+                    <Button>Video</Button>
+                    </View>
                     <MLCardOverviewCollection width="100%"/>
-                </View>
+
                 </Flex>
             </Flex>
         </div>

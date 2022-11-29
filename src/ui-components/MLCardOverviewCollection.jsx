@@ -23,9 +23,11 @@ export default function MLCardOverviewCollection(props) {
   return (
     <Collection
       type="list"
-      searchPlaceholder="Search..."
+      isSearchable={true}
+      isPaginated={false}
+      searchPlaceholder="Search model names/creators/tasks..."
       direction="column"
-      alignItems="stretch"
+      alignItems="center"
       justifyContent="left"
       items={items || []}
       {...rest}

@@ -1,5 +1,7 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+import { withAuthenticator } from '@aws-amplify/ui-react'
+import { BrowserRouter as Router, Routes, Route, Link, } from 'react-router-dom';
 import { UploadForm } from './pages/UploadForm';
 import { Home } from './pages/Home';
 
@@ -12,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

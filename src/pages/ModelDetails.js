@@ -6,11 +6,10 @@ MLModelsCreateForm
 
 export const UploadForm = () => {
     return (
-        <div className='uploadform'>
+        <div className='modeldetails'>
             <Flex justifyContent="center">
-                <MLModelsCreateForm width="40%" />
-            </Flex>
-            
+               <div>details</div>
+            </Flex> 
         </div>
     )
 }
